@@ -1,4 +1,4 @@
-const V='music-v5';
+const V='music-v7';
 const FILES=['./','index.html','manifest.webmanifest','icon-192.png','icon-512.png'];
 self.addEventListener('install',e=>{
   e.waitUntil(caches.open(V).then(c=>c.addAll(FILES.map(f=>new Request(f,{cache:'reload'})))).then(()=>self.skipWaiting()));
